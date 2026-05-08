@@ -723,7 +723,8 @@ body {
     -webkit-transition: all ease 0.5s;
     transition: all ease 0.5s;
     -webkit-animation: border-transform 10s linear infinite alternate forwards;
-    animation: border-transform 10s linear infinite alternate forwards;	
+    animation: border-transform 10s linear infinite alternate forwards;
+    margin-top: 90px !important;
 }
 
 @keyframes border-transform {
@@ -776,7 +777,8 @@ body {
     font-size:62px;
     font-weight: 700;
     letter-spacing: -.8px;
-    margin-bottom: 30px;
+    margin-top: 200px;
+    /* margin-bottom: 30px; */
 }
 .banner-text h4{
     font-size: 28px;
