@@ -778,18 +778,28 @@ body {
     font-weight: 700;
     letter-spacing: -.8px;
     margin-top: 200px;
+    color: #ffffff !important;/* Added this line */
     /* margin-bottom: 30px; */
+}
+.banner-text h3{
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -.5px;
+    margin-bottom: 0px;
+    color: #ffffff !important;
 }
 .banner-text h4{
     font-size: 28px;
     font-weight: 500;
     letter-spacing: -.5px;
     margin-bottom: 0px;
+    
 }
 .banner-text #typed {
     font-size: 28px;
     font-weight: 600;
-    letter-spacing: -.5px;	
+    letter-spacing: -.5px;
+    color: #ffffff !important;	
 }
 .banner-area .home-social {
     position: absolute;
