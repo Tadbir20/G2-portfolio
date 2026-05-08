@@ -359,22 +359,17 @@ img {
 	display:none;
 }
 
-/* width */
+/* Hide scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  display: none;
 }
-/* Track */
-::-webkit-scrollbar-track {
-  background: #eceaea; 
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-border-radius:10px;  
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @media (min-width: 1200px){
@@ -567,6 +562,18 @@ body {
     color: rgba(255,255,255,0);
 }
 
+.sidebar-logo {
+    text-align: center;
+    margin-top: -80px;
+    margin-bottom: 10px;
+}
+.sidebar-logo img {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
 .content {
     position: fixed;
     top: 0px;
@@ -586,6 +593,16 @@ body {
     transform: translate3d(0, 0, 0);
     z-index: 5;
 }
+
+/* Hide scrollbar while keeping scroll functionality */
+.content::-webkit-scrollbar {
+    display: none;
+}
+.content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .body-content{
 	position:relative;
 	overflow-x:hidden;
@@ -777,7 +794,7 @@ body {
     font-size:62px;
     font-weight: 700;
     letter-spacing: -.8px;
-    margin-top: 200px;
+    margin-top: -300px;
     color: #ffffff !important;/* Added this line */
     /* margin-bottom: 30px; */
 }
@@ -803,21 +820,32 @@ body {
 }
 .banner-area .home-social {
     position: absolute;
-	right: -60px;
+	right: -260px;
     bottom: -75px;
 }
-
+.custom-k {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A clean, modern font */
+    font-weight: bold;
+    font-size: 18px; /* Match the size of your other icons */
+    color: #ffffff; /* Kaggle's official brand blue */
+    display: inline-block;
+    width: 20px; /* Adjust based on your other buttons */
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
 .social li a {
     border-radius: 50%;
-    text-align: center;
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 	color:#2f2f2f;
     font-size: 16px;
     margin-bottom: 20px;
     transition: 0.3s;
     height: 45px;
     width: 45px;
-    line-height: 45px;
+    line-height: normal;
     background: #faf8f8;
     -webkit-transition: all ease 0.5s;
     transition: all ease 0.5s;
