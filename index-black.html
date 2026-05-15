@@ -97,8 +97,16 @@ sc<!doctype html>
 			<div class="section-wrapper">			
 				<section>
 					<div id="home" class="banner-area content active">
-						<div class="banne-middle vh d-flex" style="background-image:url(img/bg2.jpg)">
-							<div class="container">
+						<div class="banne-middle vh d-flex" style="background-image:url(img/bg2.jpg); position: relative; overflow: hidden;">
+							<!-- Video Background Effect -->
+							<div class="video-container" style="position: absolute; right: 50%; top: 0; width: 50%; height: 100%; overflow: hidden; opacity: 0.6;">
+								<video width="100%" height="100%" autoplay muted loop style="width: 100%; height: 100%; object-fit: cover; transform: rotate(270deg);">
+									<source src="video/WhatsApp Video 2026-05-15 at 10.59.43 PM.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<!-- Video Background Effect End -->
+							<div class="container" style="position: relative; z-index: 2;">
 								<div class="row h-100 align-items-center justify-content-center">
 									<div class="col-md-12 text-center">
 										<div class="banner-text">
