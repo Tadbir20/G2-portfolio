@@ -312,51 +312,105 @@ sc<!doctype html>
 							<div class="row">
 								<div class="col-lg-12">
 									<div class="tittle-warp">
-										<h2>Our Partners</h2>
+										<h2>Skills</h2>
 									</div>
 								</div>	
 								<div class="col-xl-12">
-									<div class="brand-active mb-30 owl-carousel">
-										<div class="brand-wrapper">
-											<div class="brand-img">
-												<div class="img">
-													<a href="#"><img src="img/brand/b1.png" alt="" /></a>
-												</div>
-											</div>
-										</div>
-										<div class="brand-wrapper">
-											<div class="brand-img">
-												<div class="img">
-													<a href="#"><img src="img/brand/b2.png" alt="" /></a>
-												</div>
-											</div>
-										</div>
-										<div class="brand-wrapper">
-											<div class="brand-img">
-												<div class="img">
-													<a href="#"><img src="img/brand/b3.png" alt="" /></a>
-												</div>
-											</div>
-										</div>
-										<div class="brand-wrapper">
-											<div class="brand-img">
-												<div class="img">
-													<a href="#"><img src="img/brand/b4.png" alt="" /></a>
-												</div>
-											</div>
-										</div>
-										<div class="brand-wrapper">
-											<div class="brand-img">
-												<div class="img">
-													<a href="#"><img src="img/brand/b2.png" alt="" /></a>
-												</div>
-											</div>
-										</div>
-										<div class="brand-wrapper">
-											<div class="brand-img">
-												<div class="img">
-													<a href="#"><img src="img/brand/b3.png" alt="" /></a>
-												</div>
+									<style>
+										.skill-btn {
+											display: inline-flex;
+											flex-direction: column;
+											align-items: center;
+											justify-content: center;
+											gap: 8px;
+											padding: 15px 12px;
+											margin: 8px;
+											width: 80px;
+											height: 100px;
+											background: rgba(0, 212, 255, 0.15);
+											border: 1px solid rgba(0, 212, 255, 0.3);
+											border-radius: 12px;
+											color: #ffffff;
+											font-size: 12px;
+											transition: all 0.3s ease;
+											cursor: default;
+											white-space: normal;
+											text-align: center;
+										}
+										.skill-btn i {
+											font-size: 55px;
+											display: block;
+										}
+										.skill-btn:hover {
+											background: rgba(0, 212, 255, 0.3);
+											border-color: #00d4ff;
+											box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+											transform: translateY(-5px);
+										}
+										.skills-scroll-container {
+											overflow: hidden;
+											background: rgba(0, 0, 0, 0.3);
+											border-radius: 10px;
+											padding: 30px 0;
+										}
+										.skills-scroll-wrapper {
+											display: flex;
+											animation: scrollRight 120s linear infinite;
+											width: fit-content;
+										}
+										@keyframes scrollRight {
+											0% {
+												transform: translateX(0);
+											}
+											100% {
+												transform: translateX(-100%);
+											}
+										}
+										.skills-scroll-wrapper:hover {
+											animation-play-state: paused;
+										}
+									</style>
+									<div class="skills-list mb-30">
+										<div class="skills-scroll-container">
+											<div class="skills-scroll-wrapper">
+												<span class="skill-btn"><i class="fa fa-paint-brush"></i>Illustrator</span>
+												<span class="skill-btn"><i class="fa fa-image"></i>Photoshop</span>
+												<span class="skill-btn"><i class="fa fa-palette"></i>Canva</span>
+												<span class="skill-btn"><i class="fa fa-pencil"></i>Figma</span>
+												<span class="skill-btn"><i class="fa fa-code"></i>VS Code</span>
+												<span class="skill-btn"><i class="fa fa-github"></i>Git / Github</span>
+												<span class="skill-btn"><i class="fa fa-plus"></i>C++</span>
+												<span class="skill-btn"><i class="fa fa-html5"></i>HTML</span>
+												<span class="skill-btn"><i class="fa fa-server"></i>PHP</span>
+												<span class="skill-btn"><i class="fa fa-css3"></i>CSS</span>
+												<span class="skill-btn"><i class="fa fa-cog"></i>JS</span>
+												<span class="skill-btn"><i class="fa fa-database"></i>My-SQL</span>
+												<span class="skill-btn"><i class="fa fa-sitemap"></i>Neo4j</span>
+												<span class="skill-btn"><i class="fa fa-windows"></i>Windows OS</span>
+												<span class="skill-btn"><i class="fa fa-ubuntu"></i>Ubuntu OS</span>
+												<span class="skill-btn"><i class="fa fa-linux"></i>Linux OS</span>
+												<span class="skill-btn"><i class="fa fa-shield"></i>Kali Linux OS</span>
+												<span class="skill-btn"><i class="fa fa-file-word"></i>Microsoft Word</span>
+												<span class="skill-btn"><i class="fa fa-file-excel"></i>Microsoft Excel</span>
+												<span class="skill-btn"><i class="fa fa-paint-brush"></i>Illustrator</span>
+												<span class="skill-btn"><i class="fa fa-image"></i>Photoshop</span>
+												<span class="skill-btn"><i class="fa fa-palette"></i>Canva</span>
+												<span class="skill-btn"><i class="fa fa-pencil"></i>Figma</span>
+												<span class="skill-btn"><i class="fa fa-code"></i>VS Code</span>
+												<span class="skill-btn"><i class="fa fa-github"></i>Git / Github</span>
+												<span class="skill-btn"><i class="fa fa-plus"></i>C++</span>
+												<span class="skill-btn"><i class="fa fa-html5"></i>HTML</span>
+												<span class="skill-btn"><i class="fa fa-server"></i>PHP</span>
+												<span class="skill-btn"><i class="fa fa-css3"></i>CSS</span>
+												<span class="skill-btn"><i class="fa fa-cog"></i>JS</span>
+												<span class="skill-btn"><i class="fa fa-database"></i>My-SQL</span>
+												<span class="skill-btn"><i class="fa fa-sitemap"></i>Neo4j</span>
+												<span class="skill-btn"><i class="fa fa-windows"></i>Windows OS</span>
+												<span class="skill-btn"><i class="fa fa-ubuntu"></i>Ubuntu OS</span>
+												<span class="skill-btn"><i class="fa fa-linux"></i>Linux OS</span>
+												<span class="skill-btn"><i class="fa fa-shield"></i>Kali Linux OS</span>
+												<span class="skill-btn"><i class="fa fa-file-word"></i>Microsoft Word</span>
+												<span class="skill-btn"><i class="fa fa-file-excel"></i>Microsoft Excel</span>
 											</div>
 										</div>
 									</div>
