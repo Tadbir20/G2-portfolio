@@ -306,7 +306,6 @@ a:hover,
 }
 a,
 button {
-	color: ;
 	outline: medium none;
 }
 button{cursor: pointer;}
@@ -1091,8 +1090,11 @@ body {
   display: inline-block;
   font-weight: 500;
 }
-.counter-icon{
-	text-align:center;
+.counter-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 .counter-icon a{
     border-radius: 50%;
