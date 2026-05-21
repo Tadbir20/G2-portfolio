@@ -1096,17 +1096,20 @@ body {
 	align-items: center;
 	width: 100%;
 }
-.counter-icon a{
+.counter-icon a {
     border-radius: 50%;
-    text-align: center;
-    display: inline-block;
+    /* Use flexbox instead of inline-block/text-align */
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center; 
+    
     color: #2f2f2f;
     font-size: 24px;
     margin-bottom: 10px;
     transition: 0.3s;
     height: 55px;
     width: 55px;
-    line-height: 55px;
+    /* Remove line-height: 55px; because flexbox handles it now */
     background: #eaeaea;
     -webkit-transition: all ease 0.5s;
     transition: all ease 0.5s;
