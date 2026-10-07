@@ -1,150 +1,158 @@
-/* Normal desktop :992px. LG Device */
-@media (min-width: 992px) and (max-width: 1200px) {
-.header-none{
-	display:none;
-}
-.content {
-    padding-left: 0px;
-}
-.banner-area .home-social {
-    position: absolute;
-    right: 0px;
-    bottom:-65px
+/* Responsive adjustments for Portfolio */
+
+/* =========================================
+   Mobile & Tablet (< 992px)
+   ========================================= */
+@media only screen and (max-width: 991px) {
+    /* Hide desktop sidebar */
+    .header-none {
+        display: none !important;
+    }
+    
+    /* Reset content padding and add top padding for mobile menu */
+    .content {
+        padding-left: 0 !important;
+        padding-top: 60px; /* Space for the hamburger menu */
+    }
+
+    /* Typography adjustments using clamp */
+    .banner-text h1 {
+        font-size: clamp(2.5rem, 8vw, 50px) !important;
+    }
+    
+    .banner-text #typed,
+    .banner-text h3 {
+        font-size: clamp(1.2rem, 5vw, 24px) !important;
+    }
+    
+    .section-title h2,
+    .about-title h2 {
+        font-size: clamp(1.8rem, 6vw, 34px) !important;
+    }
+    
+    .portfolio-content h2,
+    .testi-bio h4 {
+        font-size: clamp(1.2rem, 4vw, 22px) !important;
+    }
+    
+    /* Image fixes */
+    .testi-img img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Testimonials */
+    .testi-bio {
+        margin-top: 15px;
+        display: block;
+    }
+    .testi-img {
+        margin-bottom: 15px;
+    }
+
+    /* Layout tweaks */
+    .extra-mb, .about-bio {
+        margin-bottom: 15px; 
+    }
+    .about-btn {
+        margin-top: 25px;
+    }
+    .home-count {
+        margin-bottom: 30px;
+    }
+    .extra-margin {
+        margin-top: 15px;
+    }
+    
+    .about-bio ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Skills layout */
+    .skills-scroll-container {
+        padding: 15px 0;
+    }
+    .skill-btn {
+        width: 70px;
+        height: 90px;
+        padding: 10px;
+    }
+    .skill-btn i {
+        font-size: 40px;
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* =========================================
+   Small Mobile (< 576px)
+   ========================================= */
+@media only screen and (max-width: 575px) {
+    .brand-active.owl-carousel .owl-item img {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .banner-text:after {
+        display: none !important;
+    }
+    
+    /* Stack portfolio items */
+    .Portfolio-grid .col-sm-12 {
+        width: 100%;
+    }
 }
 
+/* =========================================
+   Desktop & Large Screens (>= 992px)
+   ========================================= */
+@media only screen and (min-width: 992px) {
+    /* Ensure sidebar is visible */
+    .header-none {
+        display: block !important;
+        width: 250px;
+    }
+    
+    /* Ensure content does not overlap with sidebar */
+    .content {
+        padding-left: 250px !important;
+    }
 
-
-
-
-/* small mobile layout :320px. */
-@media only screen and (max-width: 767px) {
-
-.header-none{
-	display:none;
-}
-.content {
-    padding-left: 0px;
-}
-.banner-text #typed {
-    font-size: 24px;
-}
-.banner-text h4 {
-    font-size: 24px;
-}
-.banner-text h1 {
-    font-size: 50px;
-}
-.banner-text:after {
-    left: -55%;
-    top: -40px;
+    /* Social icons positioning in banner */
+    .banner-area .home-social {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
 }
 
-
-.testi-img img{
-    float: left;
-}
-.testi-bio{
-    margin-top: 12px;
-    display: inline-block;
-}
-.brand-active.owl-carousel .owl-item img {
-    width: 35%;
+/* =========================================
+   Global Fluid Typography & Responsive Images
+   ========================================= */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
-.section-title h2 {
-    font-size: 34px;
-}
-.extra-mb {
-    margin-bottom: 0px;
-}
-.about-bio {
-    margin-bottom: 0px; 
-}
-.about-btn{
-	margin-top:25px;
-}
-.home-count{
-	margin-bottom:50px;
-}
-.extra-margin {
-    margin-top: 0px;
-}
-.home-text h5 {
-    margin-top: 0;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-
+/* Container limits for ultra-wide screens (4K / TV) */
+@media only screen and (min-width: 1921px) {
+    .container {
+        max-width: 1600px !important;
+    }
+    
+    /* Scale up typography for 4K */
+    body {
+        font-size: 20px;
+    }
+    
+    .section-title h2 {
+        font-size: clamp(40px, 3vw, 70px) !important;
+    }
+    
+    .banner-text h1 {
+        font-size: clamp(60px, 5vw, 100px) !important;
+    }
 }
-
-/* Large Mobile layout:550px. */
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-
-.header-none{
-	display:none;
-}
-.content {
-    padding-left: 0px;
-}
-.banner-text #typed {
-    font-size: 24px;
-}
-.banner-text h4 {
-    font-size: 24px;
-}
-.banner-text h1 {
-    font-size: 50px;
-}
-.banner-text:after {
-    left: -55%;
-    top: -40px;
-}
-
-.brand-active.owl-carousel .owl-item img {
-    width: 35%;
-}
-.testi-bio {
-    margin-top: 5px;
-}
-.section-title h2 {
-    font-size: 34px;
-}
-.extra-mb {
-    margin-bottom: 0px;
-}
-.about-bio {
-    margin-bottom: 0px; 
-}
-.about-btn{
-	margin-top:25px;
-}
-.home-count{
-	margin-bottom:50px;
-}
-
-.extra-margin {
-    margin-top: 0px;
-}
-.home-text h5 {
-    margin-top: 0;
-}
-
-
-}
-
