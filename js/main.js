@@ -125,19 +125,52 @@ $('.testi-active').owlCarousel({
 	 });
 
 	function mousecursor() {
-    if ($("body")) {
-        const e = document.querySelector(".cursor-inner"),
-            t = document.querySelector(".cursor-outer");
-        let n, i = 0,
-            o = !1;
-        window.onmousemove = function (s) {
-            o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-        }, $("body").on("mouseenter", "a, .cursor-pointer", function () {
-            e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
-        }), $("body").on("mouseleave", "a, .cursor-pointer", function () {
-            $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-        }), e.style.visibility = "visible", t.style.visibility = "visible"
-    }
+	    if (!document.body || window.matchMedia('(pointer: coarse)').matches) return;
+
+	    const inner = document.querySelector('.cursor-inner');
+	    const outer = document.querySelector('.cursor-outer');
+	    if (!inner || !outer) return;
+
+	    let mouseX = window.innerWidth / 2;
+	    let mouseY = window.innerHeight / 2;
+	    let innerX = mouseX;
+	 let innerY = mouseY;
+	    let outerX = mouseX;
+	    let outerY = mouseY;
+
+	    const hoverTargets = document.querySelectorAll('a, button, .cursor-pointer, .main-menu li, .Portfolio-menu button');
+
+	    const animateCursor = () => {
+	        innerX += (mouseX - innerX) * 0.5;
+	        innerY += (mouseY - innerY) * 0.5;
+	        outerX += (mouseX - outerX) * 0.1;
+	        outerY += (mouseY - outerY) * 0.1;
+
+	        inner.style.transform = 'translate(' + innerX + 'px, ' + innerY + 'px)';
+	        outer.style.transform = 'translate(' + outerX + 'px, ' + outerY + 'px)';
+	        requestAnimationFrame(animateCursor);
+	    };
+
+	    window.addEventListener('mousemove', function (event) {
+	        mouseX = event.clientX;
+	        mouseY = event.clientY;
+	    });
+
+	    hoverTargets.forEach(function (target) {
+	        target.addEventListener('mouseenter', function () {
+	            inner.classList.add('cursor-hover');
+	            outer.classList.add('cursor-hover');
+	        });
+
+	        target.addEventListener('mouseleave', function () {
+	            inner.classList.remove('cursor-hover');
+	            outer.classList.remove('cursor-hover');
+        });
+	    });
+
+	    inner.style.visibility = 'visible';
+	    outer.style.visibility = 'visible';
+	    requestAnimationFrame(animateCursor);
 	};
 
 	$(function () {
