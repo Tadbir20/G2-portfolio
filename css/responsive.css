@@ -12,17 +12,42 @@
     /* Reset content padding and add top padding for mobile menu */
     .content {
         padding-left: 0 !important;
-        padding-top: 60px; /* Space for the hamburger menu */
+        padding-top: 60px !important; /* Space for the hamburger menu */
     }
 
-    /* Typography adjustments using clamp */
+    /* Typography adjustments using vw to keep text within the 64% video area */
     .banner-text h1 {
-        font-size: clamp(2.5rem, 8vw, 50px) !important;
+        font-size: clamp(20px, 6vw, 150px) !important;
     }
     
     .banner-text #typed,
     .banner-text h3 {
-        font-size: clamp(1.2rem, 5vw, 24px) !important;
+        font-size: clamp(12px, 3vw, 80px) !important;
+    }
+    
+    /* Center text horizontally, but move slightly down as requested */
+    .banner-text {
+        margin: 0 auto !important;
+        transform: translateY(-50%) !important; 
+        top: 55% !important; /* Moved down from 50% */
+    }
+
+    /* 50/50 split style for mobile/tablet */
+    .banne-middle {
+        background-position: 80% center !important;
+    }
+    .video-container {
+        width: 50% !important; 
+    }
+
+    /* Keep social icons fixed on the right edge exactly like desktop */
+    .banner-area .home-social {
+        position: fixed !important;
+        right: 15px !important; /* Slightly closer to edge on mobile */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        bottom: auto !important;
+        z-index: 999;
     }
     
     .section-title h2,
@@ -116,11 +141,41 @@
         padding-left: 250px !important;
     }
 
+    /* Shift background so the face is perfectly visible like at 75% zoom */
+    .banne-middle {
+        background-position: 80% center !important;
+    }
+
+    /* Scale down text so it matches the proportion of the 75% zoom */
+    .banner-text {
+        margin-top: 60px !important; /* Move text down to align with eyes */
+        margin-left: -60px !important; /* Move slightly to the left */
+    }
+
+    /* Scale text using viewport width (vw) so it stays perfectly proportional to the 64% video container on all screens (Laptop, Desktop, TV) */
+    .banner-text h1 {
+        font-size: clamp(30px, 4vw, 150px) !important;
+    }
+    
+    .banner-text #typed,
+    .banner-text h3 {
+        font-size: clamp(16px, 1.8vw, 80px) !important;
+    }
+
+    /* Remove max-width so the text container scales perfectly with the screen */
+    .banner-area .container {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
     /* Social icons positioning in banner */
     .banner-area .home-social {
-        position: absolute;
-        right: 30px;
-        bottom: 30px;
+        position: fixed !important;
+        right: 60px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        bottom: auto !important;
+        z-index: 999;
     }
 }
 
