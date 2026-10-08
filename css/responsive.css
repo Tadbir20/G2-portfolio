@@ -211,3 +211,30 @@ img {
         font-size: clamp(60px, 5vw, 100px) !important;
     }
 }
+
+/* =========================================
+   Global Tech Particles Background
+   ========================================= */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent !important;
+    z-index: 0; /* Place it behind all content, but over the black layer */
+    pointer-events: none; /* Prevent it from blocking clicks on the page */
+}
+
+/* Make all content sections transparent so the particles are visible underneath */
+.bg-gray-black,
+.bg-gray,
+.section-divide {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Ensure the banner area (Hero) still covers the particles */
+.banner-area {
+    background-color: #000;
+}
