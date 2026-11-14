@@ -310,6 +310,43 @@
 			justify-content: center;
 		}
 	}
+
+	/* Mockup & Portfolio Item Cyber Styling */
+	.portfolio-img {
+		border-radius: 14px;
+		border: 1px solid rgba(0, 212, 255, 0.22);
+		overflow: hidden;
+		transition: all 0.35s ease;
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+		background: #0d131a;
+	}
+	.Portfolio-wrapper {
+		transition: transform 0.35s ease;
+	}
+	.Portfolio-wrapper:hover .portfolio-img {
+		border-color: rgba(0, 212, 255, 0.65);
+		box-shadow: 0 12px 35px rgba(0, 212, 255, 0.2);
+		transform: translateY(-5px);
+	}
+	.portfolio-content h2 {
+		padding: 18px 0px 4px 0px;
+	}
+	.portfolio-content h2 a {
+		color: #ffffff !important;
+		transition: color 0.3s ease;
+	}
+	.portfolio-content:hover h2 a,
+	.portfolio-content h2 a:hover {
+		color: #00d4ff !important;
+	}
+	.portfolio-content span {
+		color: #00d4ff !important;
+		font-weight: 600;
+		font-size: 12.5px;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		display: inline-block;
+	}
 	</style>
 </head>
 
@@ -760,8 +797,8 @@
 							<button class="active" data-filter="*"><a href="#">All</a></button>
 							<button data-filter=".cat1" class=""><a href="#">Project</a></button>
 							<button data-filter=".cat2" class=""><a href="#">Mockup</a></button>
-							<button data-filter=".cat3" class=""><a href="#">Photo</a></button>
-							<button data-filter=".cat4" class=""><a href="#">Popup</a></button>
+							<button data-filter=".cat3" class=""><a href="#">Poster / Flyer</a></button>
+							<button data-filter=".cat4" class=""><a href="#">LOGO</a></button>
 							<button data-filter=".cat5" class=""><a href="#">Other</a></button>
 						</div>
 						<div class="Portfolio-grid grid filter custom">
@@ -881,69 +918,451 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat2 cat5">
+																<!-- Mockup 1: Brand Stationery -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat2">
 									<div class="Portfolio-wrapper mb-45">
 										<div class="portfolio-img">
-											<a href="img/portfolio/2.jpg" class="popup-img">
-												<img src="img/portfolio/2.jpg" alt="">
+											<a href="img/portfolio/mockup-1.jpg" class="popup-img">
+												<img src="img/portfolio/mockup-1.jpg" alt="Brand Stationery Mockup">
 											</a>
 										</div>
 										<div class="portfolio-content">
-											<h2><a href="#">Buisness Card</a></h2>
-											<span>mockup</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat5 cat2 cat3">
-									<div class="Portfolio-wrapper mb-45">
-										<div class="portfolio-img">
-											<a class="popup-img" href="img/portfolio/3.jpg"><img
-													src="img/portfolio/3.jpg" alt=""></a>
-										</div>
-										<div class="portfolio-content">
-											<h2><a href="#">Ya Moda Flyer</a></h2>
-											<span>Photo</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat3 cat2">
-									<div class="Portfolio-wrapper mb-45">
-										<div class="portfolio-img">
-											<a class="popup-img" href="img/portfolio/4.jpg"><img
-													src="img/portfolio/4.jpg" alt=""></a>
-										</div>
-										<div class="portfolio-content">
-											<h2><a href="#">Hello I Am</a></h2>
-											<span>Photo</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
-									<div class="Portfolio-wrapper mb-30">
-										<div class="portfolio-img">
-											<a data-toggle="modal" data-target="#portfolioModalone" href="#"><img
-													src="img/portfolio/5.jpg" alt=""></a>
-										</div>
-										<div class="portfolio-content">
-											<h2><a href="#">Waffle bookpack</a></h2>
-											<span>Popup</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat5 cat4">
-									<div class="Portfolio-wrapper mb-30">
-										<div class="portfolio-img">
-											<a data-toggle="modal" data-target="#portfolioModaltwo" href="#"><img
-													src="img/portfolio/6.jpg" alt=""></a>
-										</div>
-										<div class="portfolio-content">
-											<h2><a href="#">Luiz Abdo</a></h2>
-											<span>Popup</span>
+											<h2><a href="img/portfolio/mockup-1.jpg" class="popup-img">Brand Stationery Mockup</a></h2>
+											<span>Mockup</span>
 										</div>
 									</div>
 								</div>
 
+								<!-- Mockup 2: Package Box Branding -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat2">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/mockup-2.jpg" class="popup-img">
+												<img src="img/portfolio/mockup-2.jpg" alt="Package Box Branding Mockup">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/mockup-2.jpg" class="popup-img">Package Box Branding</a></h2>
+											<span>Mockup</span>
+										</div>
+									</div>
 								</div>
+
+								<!-- Mockup 3: 3D Office Wall Logo -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat2">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/mockup-3.jpg" class="popup-img">
+												<img src="img/portfolio/mockup-3.jpg" alt="3D Office Wall Logo Mockup">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/mockup-3.jpg" class="popup-img">3D Office Wall Logo</a></h2>
+											<span>Mockup</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Mockup 4: Curved Paper Print -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat2">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/mockup-4.jpg" class="popup-img">
+												<img src="img/portfolio/mockup-4.jpg" alt="Curved Paper Print Mockup">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/mockup-4.jpg" class="popup-img">Curved Paper Print</a></h2>
+											<span>Mockup</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Mockup 5: Fabric Embroidery Crest -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat2">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/mockup-5.jpg" class="popup-img">
+												<img src="img/portfolio/mockup-5.jpg" alt="Fabric Embroidery Crest Mockup">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/mockup-5.jpg" class="popup-img">Fabric Embroidery Crest</a></h2>
+											<span>Mockup</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Mockup 6: Apparel T-Shirt -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat2">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/mockup-6.jpg" class="popup-img">
+												<img src="img/portfolio/mockup-6.jpg" alt="Apparel T-Shirt Mockup">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/mockup-6.jpg" class="popup-img">Apparel T-Shirt Mockup</a></h2>
+											<span>Mockup</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Poster / Flyer Items -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat3">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/flyer-1.jpg" class="popup-img">
+												<img src="img/portfolio/flyer-1.jpg" alt="Singla Traders Corporate Letterhead">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/flyer-1.jpg" class="popup-img">Singla Traders Corporate Letterhead</a></h2>
+											<span>Poster / Flyer</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat3">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/flyer-2.jpg" class="popup-img">
+												<img src="img/portfolio/flyer-2.jpg" alt="Designer &amp; Developer Profile Flyer">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/flyer-2.jpg" class="popup-img">Designer &amp; Developer Profile Flyer</a></h2>
+											<span>Poster / Flyer</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat3">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/flyer-3.jpg" class="popup-img">
+												<img src="img/portfolio/flyer-3.jpg" alt="Singla Traders Official Letterhead">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/flyer-3.jpg" class="popup-img">Singla Traders Official Letterhead</a></h2>
+											<span>Poster / Flyer</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat3">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/flyer-4.jpg" class="popup-img">
+												<img src="img/portfolio/flyer-4.jpg" alt="Business Event &amp; Workshop Flyer">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/flyer-4.jpg" class="popup-img">Business Event &amp; Workshop Flyer</a></h2>
+											<span>Poster / Flyer</span>
+										</div>
+									</div>
+								</div>
+								<!-- Logo 1: Alpha Cuts Barber Shop -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-1.jpg" class="popup-img">
+												<img src="img/portfolio/logo-1.jpg" alt="Alpha Cuts Barber Shop">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-1.jpg" class="popup-img">Alpha Cuts Barber Shop</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 2: Trend Schools -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-2.jpg" class="popup-img">
+												<img src="img/portfolio/logo-2.jpg" alt="Trend Schools">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-2.jpg" class="popup-img">Trend Schools</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 3: T4TC Tech Logo -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-3.jpg" class="popup-img">
+												<img src="img/portfolio/logo-3.jpg" alt="T4TC Tech Logo">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-3.jpg" class="popup-img">T4TC Tech Logo</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 4: Comfort Living BNB -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-4.jpg" class="popup-img">
+												<img src="img/portfolio/logo-4.jpg" alt="Comfort Living BNB">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-4.jpg" class="popup-img">Comfort Living BNB</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 5: Prairie Scientific Inc -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-5.png" class="popup-img">
+												<img src="img/portfolio/logo-5.png" alt="Prairie Scientific Inc">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-5.png" class="popup-img">Prairie Scientific Inc</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 6: Advance 2 Contact Airsoft -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-6.jpg" class="popup-img">
+												<img src="img/portfolio/logo-6.jpg" alt="Advance 2 Contact Airsoft">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-6.jpg" class="popup-img">Advance 2 Contact Airsoft</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 7: Bro Traders Logistics -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-7.jpg" class="popup-img">
+												<img src="img/portfolio/logo-7.jpg" alt="Bro Traders Logistics">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-7.jpg" class="popup-img">Bro Traders Logistics</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 8: Traas1 Security & Cloud -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-8.jpg" class="popup-img">
+												<img src="img/portfolio/logo-8.jpg" alt="Traas1 Security &amp; Cloud">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-8.jpg" class="popup-img">Traas1 Security &amp; Cloud</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 9: Cup of Pearls -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-9.png" class="popup-img">
+												<img src="img/portfolio/logo-9.png" alt="Cup of Pearls">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-9.png" class="popup-img">Cup of Pearls</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 10: Pret Auto En Ligne -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-10.jpg" class="popup-img">
+												<img src="img/portfolio/logo-10.jpg" alt="Pret Auto En Ligne">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-10.jpg" class="popup-img">Pret Auto En Ligne</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 11: Cupaholics Athletics -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-11.jpg" class="popup-img">
+												<img src="img/portfolio/logo-11.jpg" alt="Cupaholics Athletics">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-11.jpg" class="popup-img">Cupaholics Athletics</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 12: Yaacolor Print & Media -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-12.jpg" class="popup-img">
+												<img src="img/portfolio/logo-12.jpg" alt="Yaacolor Print &amp; Media">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-12.jpg" class="popup-img">Yaacolor Print &amp; Media</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 13: West Recruiting -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-13.jpg" class="popup-img">
+												<img src="img/portfolio/logo-13.jpg" alt="West Recruiting">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-13.jpg" class="popup-img">West Recruiting</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 14: Dayna Skin Aesthetics -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-14.jpg" class="popup-img">
+												<img src="img/portfolio/logo-14.jpg" alt="Dayna Skin Aesthetics">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-14.jpg" class="popup-img">Dayna Skin Aesthetics</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 15: MSP Consulting -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-15.jpg" class="popup-img">
+												<img src="img/portfolio/logo-15.jpg" alt="MSP Consulting">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-15.jpg" class="popup-img">MSP Consulting</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 16: JT Automotive -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-16.jpg" class="popup-img">
+												<img src="img/portfolio/logo-16.jpg" alt="JT Automotive">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-16.jpg" class="popup-img">JT Automotive</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 17: Paradigm Law Group -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-17.jpg" class="popup-img">
+												<img src="img/portfolio/logo-17.jpg" alt="Paradigm Law Group">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-17.jpg" class="popup-img">Paradigm Law Group</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 18: Pro Tiles -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-18.jpg" class="popup-img">
+												<img src="img/portfolio/logo-18.jpg" alt="Pro Tiles">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-18.jpg" class="popup-img">Pro Tiles</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 19: Hoexl Refresh Your Space -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-19.jpg" class="popup-img">
+												<img src="img/portfolio/logo-19.jpg" alt="Hoexl Refresh Your Space">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-19.jpg" class="popup-img">Hoexl Refresh Your Space</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Logo 20: Singla Traders -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat4">
+									<div class="Portfolio-wrapper mb-45">
+										<div class="portfolio-img">
+											<a href="img/portfolio/logo-20.jpg" class="popup-img">
+												<img src="img/portfolio/logo-20.jpg" alt="Singla Traders">
+											</a>
+										</div>
+										<div class="portfolio-content">
+											<h2><a href="img/portfolio/logo-20.jpg" class="popup-img">Singla Traders</a></h2>
+											<span>Logo</span>
+										</div>
+									</div>
+								</div></div>
 						</div>
 					</div>
 				</div>
