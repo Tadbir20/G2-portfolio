@@ -23,9 +23,9 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/line-awesome.css">
-	<link rel="stylesheet" href="css/style.css?v=2">
-	<link rel="stylesheet" href="css/dark.css?v=2">
-	<link rel="stylesheet" href="css/responsive.css?v=42">
+	<link rel="stylesheet" href="css/style.css?v=44">
+	<link rel="stylesheet" href="css/dark.css?v=44">
+	<link rel="stylesheet" href="css/responsive.css?v=44">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
 		rel="stylesheet">
 
@@ -51,6 +51,266 @@
 	</style>
 
 	<!-- END ALL CSS -->
+
+	<!-- Project Cards CSS -->
+	<style>
+	.project-card {
+		background: linear-gradient(145deg, rgba(8, 20, 36, 0.85) 0%, rgba(4, 10, 18, 0.95) 100%);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		border: 1px solid rgba(0, 212, 255, 0.25);
+		border-radius: 18px;
+		padding: 30px 26px 24px;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+		min-height: 380px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-bottom: 45px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+	}
+	.project-card::before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0;
+		height: 3px;
+		background: linear-gradient(90deg, #00d4ff, #0077b6, #00f5d4, #00d4ff);
+		background-size: 200% 100%;
+		animation: projectShimmer 4s infinite linear;
+	}
+	@keyframes projectShimmer {
+		0% { background-position: -200% 0; }
+		100% { background-position: 200% 0; }
+	}
+	.project-card::after {
+		content: '';
+		position: absolute;
+		top: -40px; right: -40px;
+		width: 140px; height: 140px;
+		border-radius: 50%;
+		background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, transparent 70%);
+		pointer-events: none;
+	}
+	.project-card:hover {
+		border-color: rgba(0, 212, 255, 0.7);
+		box-shadow: 0 16px 45px rgba(0, 212, 255, 0.2), 0 0 25px rgba(0, 212, 255, 0.12), inset 0 1px 0 rgba(0, 212, 255, 0.3);
+		transform: translateY(-8px);
+		background: linear-gradient(145deg, rgba(12, 28, 48, 0.9) 0%, rgba(5, 14, 24, 0.98) 100%);
+	}
+	.project-card-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+	}
+	.project-card-icon {
+		width: 48px; height: 48px;
+		border-radius: 12px;
+		background: rgba(0, 212, 255, 0.1);
+		border: 1px solid rgba(0, 212, 255, 0.3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 22px;
+		color: #00d4ff;
+		flex-shrink: 0;
+		box-shadow: 0 0 15px rgba(0, 212, 255, 0.15);
+		transition: all 0.3s ease;
+	}
+	.project-card:hover .project-card-icon {
+		background: rgba(0, 212, 255, 0.22);
+		border-color: #00d4ff;
+		box-shadow: 0 0 20px rgba(0, 212, 255, 0.35);
+		transform: scale(1.05);
+	}
+	.project-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		padding: 5px 14px;
+		border-radius: 20px;
+		background: rgba(0, 212, 255, 0.08);
+		border: 1px solid rgba(0, 212, 255, 0.28);
+		color: #00d4ff;
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+	}
+	.project-pill i { font-size: 13px; }
+	.project-card-title {
+		font-size: 22px;
+		font-weight: 700;
+		color: #ffffff;
+		margin: 0 0 5px 0;
+		line-height: 1.25;
+	}
+	.project-card-subtitle {
+		font-size: 12.5px;
+		font-weight: 600;
+		color: #00d4ff;
+		text-transform: uppercase;
+		letter-spacing: 1.2px;
+		margin-bottom: 14px;
+	}
+	.project-card-desc {
+		font-size: 13.5px;
+		color: rgba(255, 255, 255, 0.72);
+		line-height: 1.65;
+		margin-bottom: 14px;
+	}
+	.project-features {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 18px 0;
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+	}
+	.project-features li {
+		font-size: 12.5px;
+		color: rgba(255, 255, 255, 0.85);
+		display: flex;
+		align-items: flex-start;
+		gap: 8px;
+		line-height: 1.45;
+	}
+	.project-features li i {
+		color: #00d4ff;
+		font-size: 12px;
+		margin-top: 3px;
+		flex-shrink: 0;
+	}
+	.project-tech-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 7px;
+		margin-bottom: 22px;
+	}
+	.tech-badge {
+		background: rgba(0, 212, 255, 0.08);
+		border: 1px solid rgba(0, 212, 255, 0.22);
+		color: rgba(0, 212, 255, 0.9);
+		padding: 4px 11px;
+		border-radius: 20px;
+		font-size: 11.5px;
+		font-weight: 600;
+		letter-spacing: 0.4px;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		transition: all 0.25s ease;
+	}
+	.tech-badge:hover {
+		background: rgba(0, 212, 255, 0.22);
+		border-color: #00d4ff;
+		color: #ffffff;
+		transform: translateY(-2px);
+	}
+	.tech-badge i { font-size: 13px; }
+	.project-card-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid rgba(0, 212, 255, 0.12);
+		padding-top: 18px;
+		margin-top: auto;
+	}
+	.project-status-dot {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 12px;
+		color: rgba(255, 255, 255, 0.5);
+		font-weight: 500;
+	}
+	.status-dot {
+		width: 8px; height: 8px;
+		border-radius: 50%;
+		background: #00d4ff;
+		box-shadow: 0 0 8px #00d4ff;
+		animation: pulse-dot 2s infinite ease-in-out;
+	}
+	@keyframes pulse-dot {
+		0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 8px #00d4ff; }
+		50% { opacity: 0.4; transform: scale(0.85); box-shadow: 0 0 3px #00d4ff; }
+	}
+	.project-github-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		background: rgba(0, 212, 255, 0.1);
+		border: 1px solid rgba(0, 212, 255, 0.35);
+		color: #00d4ff !important;
+		padding: 8px 18px;
+		border-radius: 25px;
+		font-size: 12px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		letter-spacing: 0.5px;
+	}
+	.project-github-btn:hover {
+		background: linear-gradient(90deg, #00d4ff, #0099ff);
+		border-color: #00d4ff;
+		color: #05080c !important;
+		box-shadow: 0 0 20px rgba(0, 212, 255, 0.45);
+		text-decoration: none;
+		transform: translateY(-2px);
+	}
+	.project-github-btn:hover i {
+		color: #05080c !important;
+	}
+	.project-github-btn i {
+		font-size: 14px;
+		transition: transform 0.25s ease;
+	}
+	.project-github-btn:hover i.fa-arrow-right {
+		transform: translateX(3px);
+	}
+	.project-card-corner {
+		position: absolute;
+		top: 14px; right: 18px;
+		opacity: 0.05;
+		font-size: 75px;
+		color: #00d4ff;
+		pointer-events: none;
+		line-height: 1;
+		transition: opacity 0.3s ease;
+	}
+	.project-card:hover .project-card-corner {
+		opacity: 0.1;
+	}
+	@media only screen and (max-width: 575px) {
+		.project-card {
+			padding: 22px 18px 18px;
+			min-height: auto;
+		}
+		.project-card-title {
+			font-size: 19px;
+		}
+		.project-card-subtitle {
+			font-size: 11.5px;
+		}
+		.project-card-desc {
+			font-size: 12.5px;
+		}
+		.project-features li {
+			font-size: 11.5px;
+		}
+		.project-card-footer {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 12px;
+		}
+		.project-github-btn {
+			width: 100%;
+			justify-content: center;
+		}
+	}
+	</style>
 </head>
 
 <body>
@@ -498,7 +758,7 @@
 						</div>
 						<div class="Portfolio-menu text-left mb-40">
 							<button class="active" data-filter="*"><a href="#">All</a></button>
-							<button data-filter=".cat1" class=""><a href="#">Youtube</a></button>
+							<button data-filter=".cat1" class=""><a href="#">Project</a></button>
 							<button data-filter=".cat2" class=""><a href="#">Mockup</a></button>
 							<button data-filter=".cat3" class=""><a href="#">Photo</a></button>
 							<button data-filter=".cat4" class=""><a href="#">Popup</a></button>
@@ -506,16 +766,118 @@
 						</div>
 						<div class="Portfolio-grid grid filter custom">
 							<div class="row">
+																<!-- Project 1: Report X -->
 								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat1">
-									<div class="Portfolio-wrapper mb-45">
-										<div class="portfolio-img">
-											<a class="video-btn" data-type="iframe"
-												href="https://www.youtube.com/watch?v=2kxuX1LT6VM&list=RD2kxuX1LT6VM&start_radio=1"><img
-													src="img/portfolio/1.jpg" alt=""></a>
+									<div class="project-card">
+										<span class="project-card-corner"><i class="devicon-java-plain"></i></span>
+										<div>
+											<div class="project-card-header">
+												<div class="project-card-icon">
+													<i class="fa fa-shield"></i>
+												</div>
+												<span class="project-pill"><i class="devicon-java-plain"></i> Project 01</span>
+											</div>
+											<h3 class="project-card-title">Report X</h3>
+											<p class="project-card-subtitle">Scam Report System</p>
+											<p class="project-card-desc">The system is designed to solve the problem of current scam reporting methods being slow and inefficient.</p>
+											<ul class="project-features">
+												<li><i class="fa fa-check-circle"></i> Rapid scam incident logging & evidence capture</li>
+												<li><i class="fa fa-check-circle"></i> Pattern verification for proactive digital fraud prevention</li>
+												<li><i class="fa fa-check-circle"></i> Centralized tracking dashboard for investigators & users</li>
+											</ul>
+											<div class="project-tech-stack">
+												<span class="tech-badge"><i class="devicon-java-plain"></i> Java</span>
+												<span class="tech-badge"><i class="fa fa-cubes"></i> OOP Architecture</span>
+												<span class="tech-badge"><i class="devicon-mysql-plain"></i> MySQL</span>
+												<span class="tech-badge"><i class="fa fa-desktop"></i> Desktop GUI</span>
+											</div>
 										</div>
-										<div class="portfolio-content">
-											<h2><a href="#">Personal videos</a></h2>
-											<span>youtube</span>
+										<div class="project-card-footer">
+											<div class="project-status-dot">
+												<span class="status-dot"></span>
+												<span>Security Software</span>
+											</div>
+											<a href="https://github.com/Tadbir20/Report-X" target="_blank" class="project-github-btn">
+												<i class="fa fa-github"></i> <span>View on GitHub</span> <i class="fa fa-arrow-right"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<!-- Project 2: PocketCap -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat1">
+									<div class="project-card">
+										<span class="project-card-corner"><i class="devicon-laravel-plain"></i></span>
+										<div>
+											<div class="project-card-header">
+												<div class="project-card-icon">
+													<i class="fa fa-line-chart"></i>
+												</div>
+												<span class="project-pill"><i class="devicon-laravel-plain"></i> Project 02</span>
+											</div>
+											<h3 class="project-card-title">PocketCap</h3>
+											<p class="project-card-subtitle">Investment Management System</p>
+											<p class="project-card-desc">PocketCap is a secure, transparent investment management system for startups and investors.</p>
+											<ul class="project-features">
+												<li><i class="fa fa-check-circle"></i> Startup cap table & equity distribution tracking</li>
+												<li><i class="fa fa-check-circle"></i> Investor portfolio analytics & real-time ROI reports</li>
+												<li><i class="fa fa-check-circle"></i> Transparent, auditable investment record keeping</li>
+											</ul>
+											<div class="project-tech-stack">
+												<span class="tech-badge"><i class="devicon-laravel-plain"></i> Laravel</span>
+												<span class="tech-badge"><i class="devicon-php-plain"></i> PHP</span>
+												<span class="tech-badge"><i class="devicon-tailwindcss-plain"></i> Tailwind CSS</span>
+												<span class="tech-badge"><i class="devicon-vitejs-plain"></i> Vite</span>
+												<span class="tech-badge"><i class="devicon-mysql-plain"></i> MySQL</span>
+											</div>
+										</div>
+										<div class="project-card-footer">
+											<div class="project-status-dot">
+												<span class="status-dot"></span>
+												<span>FinTech Web App</span>
+											</div>
+											<a href="https://github.com/Tadbir20/PocketCap" target="_blank" class="project-github-btn">
+												<i class="fa fa-github"></i> <span>View on GitHub</span> <i class="fa fa-arrow-right"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<!-- Project 3: CaféTrack -->
+								<div class="col-12 col-lg-6 col-md-6 col-sm-12 grid-item cat1">
+									<div class="project-card">
+										<span class="project-card-corner"><i class="fa fa-coffee"></i></span>
+										<div>
+											<div class="project-card-header">
+												<div class="project-card-icon">
+													<i class="fa fa-coffee"></i>
+												</div>
+												<span class="project-pill"><i class="devicon-laravel-plain"></i> Project 03</span>
+											</div>
+											<h3 class="project-card-title">CaféTrack</h3>
+											<p class="project-card-subtitle">Cafeteria Management System</p>
+											<p class="project-card-desc">CaféTrack is a digital cafeteria management solution that reduces waiting time, prevents food waste, and builds transparency through real-time menus, inventory tracking, and reviews.</p>
+											<ul class="project-features">
+												<li><i class="fa fa-check-circle"></i> Real-time digital menu & automated inventory tracking</li>
+												<li><i class="fa fa-check-circle"></i> Smart order queue that significantly reduces waiting times</li>
+												<li><i class="fa fa-check-circle"></i> Built-in review system & food waste prevention analytics</li>
+											</ul>
+											<div class="project-tech-stack">
+												<span class="tech-badge"><i class="devicon-laravel-plain"></i> Laravel</span>
+												<span class="tech-badge"><i class="devicon-php-plain"></i> PHP</span>
+												<span class="tech-badge"><i class="devicon-flutter-plain"></i> Flutter / App</span>
+												<span class="tech-badge"><i class="devicon-mysql-plain"></i> MySQL</span>
+												<span class="tech-badge"><i class="devicon-html5-plain"></i> Blade UI</span>
+											</div>
+										</div>
+										<div class="project-card-footer">
+											<div class="project-status-dot">
+												<span class="status-dot"></span>
+												<span>Web & Mobile App</span>
+											</div>
+											<a href="https://github.com/Tadbir20/Cafetrack" target="_blank" class="project-github-btn">
+												<i class="fa fa-github"></i> <span>View on GitHub</span> <i class="fa fa-arrow-right"></i>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -580,7 +942,8 @@
 										</div>
 									</div>
 								</div>
-							</div>
+
+								</div>
 						</div>
 					</div>
 				</div>
